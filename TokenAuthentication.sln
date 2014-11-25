@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenAuthentication.API", "TokenAuthentication.API\TokenAuthentication.API.csproj", "{19594BFE-1CA9-4E23-B67E-82C57E2ACD71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJSAuthentication.Web", "AngularJSAuthentication.Web\AngularJSAuthentication.Web.csproj", "{F9236102-4750-41D6-BAE5-D85DADB2595D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{19594BFE-1CA9-4E23-B67E-82C57E2ACD71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19594BFE-1CA9-4E23-B67E-82C57E2ACD71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19594BFE-1CA9-4E23-B67E-82C57E2ACD71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9236102-4750-41D6-BAE5-D85DADB2595D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9236102-4750-41D6-BAE5-D85DADB2595D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9236102-4750-41D6-BAE5-D85DADB2595D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9236102-4750-41D6-BAE5-D85DADB2595D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
