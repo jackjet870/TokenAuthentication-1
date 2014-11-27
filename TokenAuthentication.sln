@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenAuthentication.API", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJSAuthentication.Web", "AngularJSAuthentication.Web\AngularJSAuthentication.Web.csproj", "{F9236102-4750-41D6-BAE5-D85DADB2595D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenAuthentication.ResourceServer", "ResourceServer\TokenAuthentication.ResourceServer.csproj", "{68904692-6C53-464A-9BD8-314E0E9AD279}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F9236102-4750-41D6-BAE5-D85DADB2595D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9236102-4750-41D6-BAE5-D85DADB2595D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9236102-4750-41D6-BAE5-D85DADB2595D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68904692-6C53-464A-9BD8-314E0E9AD279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68904692-6C53-464A-9BD8-314E0E9AD279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68904692-6C53-464A-9BD8-314E0E9AD279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68904692-6C53-464A-9BD8-314E0E9AD279}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
