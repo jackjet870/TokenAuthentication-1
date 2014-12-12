@@ -1,0 +1,4 @@
+﻿{
+    "apiAuthBaseURI" : "http://localhost:49178/",
+    "apiResourceBaseURI" : "http://localhost:50412/"
+}

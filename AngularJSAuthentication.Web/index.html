@@ -5,10 +5,13 @@
     <title>AngularJS Authentication</title>
     <link href="content/css/bootstrap.min.css" rel="stylesheet" />
     <link href="content/css/site.css" rel="stylesheet" />
-    <link href="content/css/loading-bar.min.css" rel="stylesheet" />
+    <link href="content/css/loading-bar.css" rel="stylesheet" />
+    <link href="content/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="content/css/social-buttons.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
+
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-ng-controller="indexController">
         <div class="container">
             <div class="navbar-header">
@@ -19,8 +22,10 @@
             </div>
             <div class="collapse navbar-collapse" data-collapse="!navbarExpanded">
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">{{authentication.computerName}}</a></li>
                     <li data-ng-hide="!authentication.isAuth"><a href="#">Welcome {{authentication.userName}}</a></li>
                     <li data-ng-hide="!authentication.isAuth"><a href="#/orders">My Orders</a></li>
+                    <li data-ng-hide="!authentication.isAuth"><a href="#/refresh">Refresh Token</a></li>
                     <li data-ng-hide="!authentication.isAuth"><a href="" data-ng-click="logOut()">Logout</a></li>
                     <li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
                     <li data-ng-hide="authentication.isAuth"> <a href="#/signup">Sign Up</a></li>
@@ -33,7 +38,7 @@
             <div class="page-header text-center">
                 <h1>AngularJS Authentication</h1>
             </div>
-            <p>This single page application is built using AngularJS, it is using OAuth bearer token authentication, ASP.NET Web API 2, OWIN middleware, and ASP.NET Identity to generate tokens and register users.</p>
+            <p>AngularJS Application which uses OAuth Bearer Token for authentication and implements Refresh Tokens. The backend API is built using ASP.NET Web API 2, OWIN middleware, and ASP.NET Identity.</p>
         </div>
     </div>
     <div class="container">
@@ -60,15 +65,24 @@
     <script src="scripts/loading-bar.min.js"></script>
     <!-- Load app main script -->
     <script src="app/app.js"></script>
+    <!-- Load providers -->
+    <script src="app/providers/envConfig.js"></script>
     <!-- Load services -->
     <script src="app/services/authInterceptorService.js"></script>
+    <script src="app/services/blahService.js"></script>
     <script src="app/services/authService.js"></script>
     <script src="app/services/ordersService.js"></script>
+    <script src="app/services/tokensManagerService.js"></script>
     <!-- Load controllers -->
     <script src="app/controllers/indexController.js"></script>
-    <script src="app/controllers/homeController.js"></script>
+    <script src="app/controllers/HomeController.js"></script>
     <script src="app/controllers/loginController.js"></script>
     <script src="app/controllers/signupController.js"></script>
     <script src="app/controllers/ordersController.js"></script>
+    <script src="app/controllers/refreshController.js"></script>
+    <script src="app/controllers/tokensManagerController.js"></script>
+    <script src="app/controllers/associateController.js"></script>
+    <!-- Load custom filters -->
+    <!-- Load custom directives -->
 </body>
 </html>

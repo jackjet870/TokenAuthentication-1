@@ -1,12 +1,20 @@
 ﻿'use strict';
-app.factory('authService', ['$http', '$q', 'localStorageService', function ($http, $q, localStorageService) {
+app.factory('authService', ['$http', '$q', 'localStorageService', 'ngAuthSettings', 'blahService', function ($http, $q, localStorageService, ngAuthSettings, blahService) {
 
-    var serviceBase = 'http://localhost:49178/';
+    var serviceBase = ngAuthSettings.apiServiceBaseUri;
     var authServiceFactory = {};
 
     var _authentication = {
         isAuth: false,
-        userName: ""
+        userName: "",
+        computerName: blahService.computerName,
+        useRefreshTokens: false
+    };
+
+    var _externalAuthData = {
+        provider: "",
+        userName: "",
+        externalAccessToken: ""
     };
 
     var _saveRegistration = function (registration) {
@@ -21,7 +29,9 @@ app.factory('authService', ['$http', '$q', 'localStorageService', function ($htt
 
     var _login = function (loginData) {
 
-        var data = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password;
+        var data = "grant_type=password&username=" + loginData.userName +
+            "&password=" + loginData.password +
+            "&computername=" + _authentication.computerName;
 
         var deferred = $q.defer();
 

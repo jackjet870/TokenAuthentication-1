@@ -3,7 +3,7 @@
 app.config(function ($routeProvider) {
 
     $routeProvider.when("/home", {
-        controller: "homeController",
+        controller: "HomeController",
         templateUrl: "/app/views/home.html"
     });
 
@@ -22,7 +22,36 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/orders.html"
     });
 
+    $routeProvider.when("/refresh", {
+        controller: "refreshController",
+        templateUrl: "/app/views/refresh.html"
+    });
+
+    $routeProvider.when("/tokens", {
+        controller: "tokensManagerController",
+        templateUrl: "/app/views/tokens.html"
+    });
+
+    $routeProvider.when("/associate", {
+        controller: "associateController",
+        templateUrl: "/app/views/associate.html"
+    });
+
     $routeProvider.otherwise({ redirectTo: "/home" });
+});
+
+var envConfig = {
+    apiAuthBaseURI: 'http://localhost:49178/',
+    apiResourceBaseURI: 'http://localhost:50412/'
+}
+//var serviceBase = 'http://ngauthenticationapi.azurewebsites.net/';
+app.constant('ngAuthSettings', {
+    apiServiceBaseUri: envConfig.apiAuthBaseURI,
+    clientId: 'ngAuthApp'
+});
+
+app.constant('ngResourceSettings', {
+    apiResourceBaseUri: envConfig.apiResourceBaseURI
 });
 
 app.config(function ($httpProvider) {

@@ -1,7 +1,8 @@
 ﻿'use strict';
-app.factory('ordersService', ['$http', function ($http) {
+app.factory('ordersService', ['$http', 'ngResourceSettings', function ($http, ngResourceSettings) {
 
-    var serviceBase = 'http://localhost:50412/';
+    var serviceBase = ngResourceSettings.apiResourceBaseUri;
+
     var ordersServiceFactory = {};
 
     var _getOrders = function () {
