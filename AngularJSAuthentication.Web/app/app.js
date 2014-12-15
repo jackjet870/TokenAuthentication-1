@@ -3,7 +3,7 @@
 app.config(function ($routeProvider) {
 
     $routeProvider.when("/home", {
-        controller: "HomeController",
+        controller: "homeController",
         templateUrl: "/app/views/home.html"
     });
 
@@ -61,3 +61,4 @@ app.config(function ($httpProvider) {
 app.run(['authService', function (authService) {
     authService.fillAuthData();
 }]);
+

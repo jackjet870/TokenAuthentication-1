@@ -49,7 +49,7 @@ namespace TokenAuthentication.API.Migrations
                     ApplicationType =  Models.ApplicationTypes.JavaScript, 
                     Active = true, 
                     RefreshTokenLifeTime = 7200, 
-                    AllowedOrigin = "http://ngauthenticationweb.azurewebsites.net"
+                    AllowedOrigin = "http://localhost:49267"
                 },
                 new Client
                 { Id = "consoleApp", 
